@@ -19,5 +19,8 @@
     "awsmug/skip": "dev-master"
   },
   "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {"TFWP\\": "src/"}
   }
 }

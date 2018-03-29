@@ -45,5 +45,8 @@
     "gulp-sass": "~3.1.0",
     "gulp-uglify": "~2.0.1",
     "jshint": "~2.9.4"
+  },
+  "autoload": {
+    "psr-4": {"TFWP\\": "src/"}
   }
 }

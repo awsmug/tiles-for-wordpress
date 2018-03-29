@@ -28,8 +28,19 @@ require __DIR__ . '/vendor/autoload.php';
 use \Skip\WP\Plugin;
 use \Skip\WP\Admin_Notices;
 
+use \TFWP\Post_Tiles;
+
 class Tiles_For_WordPress extends Plugin {
 	use Admin_Notices;
+
+	/**
+	 * Shortcodes
+	 *
+	 * @var array
+	 *
+	 * @since 1.0.0
+	 */
+	private $shortcodes = array();
 
 	/**
 	 * Running plugin
@@ -37,7 +48,7 @@ class Tiles_For_WordPress extends Plugin {
 	 * @since 1.0.0
 	 */
 	public function run() {
-		$this->add_notice( 'Plugin is running' );
+		$this->add_notice( 'Plugin is running.' );
 	}
 
 	/**
@@ -45,12 +56,24 @@ class Tiles_For_WordPress extends Plugin {
 	 *
 	 * @since 1.0.0
 	 */
-	public function setup() {
-		$this->admin_notices();
+	protected function setup() {
+		require_once 'vendor/autoload.php';
+
+		$this->init_admin_notices();
+		$this->shortcodes[] = new Post_Tiles();
 
 		$this->add_css( $this->get_asset_url( 'frontend', 'css' ) );
 		$this->add_js( $this->get_asset_url( 'frontend', 'js' ) );
 	}
 }
 
-new Tiles_For_WordPress();
+/**
+ * Plugin super function
+ *
+ * @throws \Skip\Skip_Exception
+ */
+function tiles_for_wordpress() {
+	return Tiles_For_WordPress::get_instance();
+}
+
+tiles_for_wordpress();
