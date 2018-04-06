@@ -11,7 +11,7 @@ use \Skip\WP\Template_Loader;
  *
  * @since 1.0.0
  */
-class TFWP_Template_Loader extends Template_Loader {
+class Templates extends Template_Loader {
 	/**
 	 * Setting up template loader
 	 *

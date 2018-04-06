@@ -38,9 +38,9 @@ class Post_Tiles extends Shortcode {
 
 		try {
 			if ( count( $posts ) === 0 ) {
-				$html = new TFWP_Template_Loader( 'empty' );
+				$html = new Templates( 'empty' );
 			} else {
-				$html = new TFWP_Template_Loader( 'post_loop', $posts );
+				$html = new Templates( 'post_loop', $posts );
 			}
 		} catch ( Skip_Exception $exception ) {
 			$this->log_exception( $exception, 5 );
