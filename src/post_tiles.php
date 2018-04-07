@@ -23,8 +23,6 @@ class Post_Tiles extends Shortcode {
 	 *
 	 * @return string
 	 *
-	 * @throws Skip_Exception
-	 *
 	 * @since 1.0.0
 	 */
 	public function execute( $atts ) {
