@@ -2,6 +2,7 @@
 
 namespace TFWP;
 
+use Skip\Skip_Exception;
 use \Skip\WP\Template_Loader;
 
 /**
@@ -15,7 +16,7 @@ class Templates extends Template_Loader {
 	/**
 	 * Setting up template loader
 	 *
-	 * @throws \Skip\Skip_Exception
+	 * @throws Skip_Exception
 	 *
 	 * @since 1.0.0
 	 */
@@ -27,13 +28,19 @@ class Templates extends Template_Loader {
 	/**
 	 * Loading template on post loop
 	 *
+	 * @throws Skip_Exception
+	 *
 	 * @since 1.0.0
 	 */
 	protected function template_post_loop() {
 		$posts = $this->get_argument( 1 );
 
 		foreach( $posts AS $post ) {
-			load_template( $this->get_template_file() );
+			$vars = array(
+				'post' => $post
+			);
+
+			self::load_template( $this->get_template_file(), true, $vars );
 		}
 	}
 }
