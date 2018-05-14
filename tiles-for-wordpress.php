@@ -18,7 +18,6 @@
  * Text Domain:       tiles-for-wordpress
  */
 
-// If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -28,7 +27,7 @@ require __DIR__ . '/vendor/autoload.php';
 use \Skip\WP\Plugin;
 use \Skip\WP\Admin_Notices;
 
-use \TFWP\Post_Tiles;
+use \TFWP\Shortcodes\Post_Tiles;
 
 class Tiles_For_WordPress extends Plugin {
 	use Admin_Notices;
@@ -71,6 +70,8 @@ class Tiles_For_WordPress extends Plugin {
  * Plugin super function
  *
  * @throws \Skip\Skip_Exception
+ *
+ * @since 1.0.0
  */
 function tiles_for_wordpress() {
 	return Tiles_For_WordPress::get_instance();
