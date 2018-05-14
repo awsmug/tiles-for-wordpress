@@ -6,13 +6,13 @@ use Skip\Skip_Exception;
 use \Skip\WP\Template_Loader;
 
 /**
- * Class WP_Tiles_Template_Loader
+ * Class Template
  *
  * @package TFWP
  *
  * @since 1.0.0
  */
-class Templates extends Template_Loader {
+class Template extends Template_Loader {
 	/**
 	 * Setting up template loader
 	 *
@@ -28,8 +28,6 @@ class Templates extends Template_Loader {
 	/**
 	 * Loading template on post loop
 	 *
-	 * @throws Skip_Exception
-	 *
 	 * @since 1.0.0
 	 */
 	protected function template_post_loop() {
@@ -42,5 +40,20 @@ class Templates extends Template_Loader {
 
 			self::load_template( $this->get_template_file(), true, $vars );
 		}
+	}
+
+	/**
+	 *
+	 *
+	 * @param string $method
+	 * @param array $arguments
+	 *
+	 * @throws Skip_Exception
+	 */
+	public function __call( $method, $arguments ) {
+		if( 'template_post_loop' === $method || 'template_empty' === $method ) {
+			return parent::__call( $method, $arguments );
+		}
+
 	}
 }
