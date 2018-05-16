@@ -19,6 +19,8 @@
     "awsmug/skip": "dev-master"
   },
   "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "awsmug/wp-plugin-devops": "dev-master"
   },
   "autoload": {
     "psr-4": {"TFWP\\": "src/"}

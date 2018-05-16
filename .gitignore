@@ -65,3 +65,11 @@ vendor
 !vendor/autoload.php
 !vendor/composer
 !vendor/awsmug/skip
+###
+# Automatinc added files from WP Plugin Devops
+###
+composer.lock
+test
+webserver
+vendor
+wordpress
