@@ -54,6 +54,5 @@ class Template extends Template_Loader {
 		if( 'template_post_loop' === $method || 'template_empty' === $method ) {
 			return parent::__call( $method, $arguments );
 		}
-
 	}
 }
