@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="wordpress.test">
+    <serverData>
+      <paths name="wordpress.test">
+        <serverdata>
+          <mappings>
+            <mapping deploy="wp-content/plugins/tiles-for-wordpress" local="$PROJECT_DIR$" web="wp-content/plugins/tiles-for-wordpress" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

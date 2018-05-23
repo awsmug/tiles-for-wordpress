@@ -1,6 +1,6 @@
 {
-  "name": "awsmug/wp-plugin-boilerplate",
-  "description": "WordPress Plugin Boilerplate",
+  "name": "awsmug/tiles-for-wordpress",
+  "description": "Tiles for WordPress",
   "version": "1.0.0",
   "license": "GPL-3.0",
   "type": "wordpress-plugin",
@@ -19,10 +19,8 @@
     "awsmug/skip": "dev-master"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master",
-    "awsmug/wp-plugin-devops": "dev-master"
   },
   "autoload": {
-    "psr-4": {"TFWP\\": "src/"}
+    "psr-4": {"TFWP\\": "src/src/"}
   }
 }
