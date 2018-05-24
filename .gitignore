@@ -7,3 +7,4 @@ webserver
 vendor
 wordpress
 www
+!www/wp-content/plugins/tiles-for-worpress
