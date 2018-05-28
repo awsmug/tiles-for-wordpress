@@ -1,10 +1,8 @@
 ###
 # Automatinc added files from WP Plugin Devops
 ###
+.idea
 composer.lock
 test
-webserver
 vendor
 wordpress
-www
-!www/wp-content/plugins/tiles-for-worpress
